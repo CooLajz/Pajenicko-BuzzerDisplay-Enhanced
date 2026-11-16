@@ -36,6 +36,8 @@ instalátorem výrobce; původní uživatelské nastavení tím není garantová
   přes Marketplace v 2026.11 tím nejsou prokázány. Šest testů pokrývá formátování,
   validaci protokolu, strukturu balíčku, klienta/koordinátor, import všech platforem
   a průvodce párováním s uložením nastavení obrazovky.
+- [GitHub Actions](https://github.com/CooLajz/Pajenicko-BuzzerDisplay-Enhanced/actions/runs/43920944114):
+  prošel také renderer na Ubuntu s oběma sanitizéry a oficiální validátor hassfest.
 
 ## Web a karta
 

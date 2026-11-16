@@ -1,0 +1,24 @@
+name: Validace
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  renderer:
+    name: Renderer a efekty
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Testy s kontrolou paměti
+        run: |
+          mkdir -p build
+          clang++ -std=c++17 -Wall -Wextra -fsanitize=address,undefined -g -I firmware/BuzzerDisplay tests/display_core_test.cpp firmware/BuzzerDisplay/display_core.cpp -o build/core-tests
+          ./build/core-tests
+  hassfest:
+    name: Validace Home Assistantu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: home-assistant/actions/hassfest@master

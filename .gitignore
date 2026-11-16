@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.firmware-hub-key*
+.arduino/
+.venv/
+build/
+backups/
+__pycache__/
+.pytest_cache/
+*.pyc
+arduino-cli.local.yaml
+tools/local.json

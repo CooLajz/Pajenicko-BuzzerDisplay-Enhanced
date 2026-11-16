@@ -1,0 +1,108 @@
+{
+  "title": "Pajenicko BuzzerDisplay Enhanced",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect display",
+        "description": "Enter the IP address or local hostname.",
+        "data": {
+          "host": "Device address"
+        }
+      },
+      "pair": {
+        "title": "Pair display",
+        "description": "Hold BOOT for one second. Enter the six-digit code shown on the display within three minutes.",
+        "data": {
+          "code": "Pairing code"
+        }
+      },
+      "reconfigure": {
+        "title": "Change address",
+        "data": {
+          "host": "Device address"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect. Check the address and network.",
+      "invalid_auth": "Invalid or expired pairing code."
+    },
+    "abort": {
+      "already_configured": "This display is already configured.",
+      "cannot_connect": "The device is unavailable.",
+      "wrong_device": "A different device is responding at this address.",
+      "reauth_successful": "Pairing restored.",
+      "reconfigure_successful": "Address updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Display pages",
+        "menu_options": {
+          "add_page": "Add page",
+          "edit_page": "Edit page",
+          "remove_page": "Remove page"
+        }
+      },
+      "edit_page": {
+        "title": "Select page",
+        "data": {
+          "page": "Page"
+        }
+      },
+      "remove_page": {
+        "title": "Remove page",
+        "data": {
+          "page": "Page"
+        }
+      },
+      "page": {
+        "title": "Page settings",
+        "description": "Select an entity for a live value or enter text. Long text completes a full pass. Speed 0 disables scrolling.",
+        "data": {
+          "text": "Text or value prefix",
+          "entity_id": "Entity (optional)",
+          "decimals": "Decimal places",
+          "show_unit": "Show unit",
+          "hold_seconds": "Minimum display time (s)",
+          "speed": "Scroll speed (px/s)",
+          "scroll_right": "Scroll right",
+          "enter": "Entry effect",
+          "exit": "Exit effect",
+          "transition_ms": "Transition duration (ms)",
+          "blink": "Blink mode",
+          "blink_ms": "Blink period (ms)",
+          "invert": "Invert pixels"
+        }
+      }
+    },
+    "error": {
+      "empty_page": "Select an entity or enter text.",
+      "text_too_long": "Limit text to 200 UTF-8 bytes."
+    },
+    "abort": {
+      "too_many_pages": "At most eight pages are supported.",
+      "no_pages": "No pages are configured."
+    }
+  },
+  "selector": {
+    "effect": {
+      "options": {
+        "none": "None",
+        "left": "Left side",
+        "right": "Right side",
+        "up": "Top side",
+        "down": "Bottom side",
+        "fade": "Fade"
+      }
+    },
+    "blink": {
+      "options": {
+        "none": "Off",
+        "hard": "Hard",
+        "fade": "Fade"
+      }
+    }
+  }
+}

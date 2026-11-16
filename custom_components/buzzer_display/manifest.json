@@ -1,0 +1,22 @@
+{
+  "domain": "buzzer_display",
+  "name": "Pajenicko BuzzerDisplay Enhanced",
+  "codeowners": [
+    "@CooLajz"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "frontend",
+    "http",
+    "websocket_api"
+  ],
+  "documentation": "https://github.com/CooLajz/Pajenicko-BuzzerDisplay-Enhanced",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/CooLajz/Pajenicko-BuzzerDisplay-Enhanced/issues",
+  "requirements": [],
+  "version": "0.1.0-dev.1",
+  "zeroconf": [
+    "_buzzerdisplay._tcp.local."
+  ]
+}

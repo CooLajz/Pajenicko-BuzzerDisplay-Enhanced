@@ -1,0 +1,83 @@
+show_message:
+  name: Zobrazit zprávu
+  description: Dočasně přeruší běžné obrazovky. Po uplynutí zadané doby se obnoví.
+  fields:
+    device_id:
+      name: Displej
+      required: true
+      selector:
+        device:
+          integration: buzzer_display
+    text:
+      name: Text
+      required: true
+      selector:
+        text:
+    duration:
+      name: Doba zobrazení
+      default: 10
+      selector:
+        number:
+          min: 1
+          max: 300
+          unit_of_measurement: s
+    speed:
+      name: Rychlost posunu
+      description: Nula zastaví posun; dlouhý text se pak ořízne.
+      default: 20
+      selector:
+        number:
+          min: 0
+          max: 80
+          unit_of_measurement: px/s
+    enter:
+      name: Efekt nájezdu
+      default: none
+      selector:
+        select:
+          options:
+            - {value: none, label: Bez efektu}
+            - {value: left, label: Zleva}
+            - {value: right, label: Zprava}
+            - {value: up, label: Shora}
+            - {value: down, label: Zdola}
+            - {value: fade, label: Rozsvícení}
+    exit:
+      name: Efekt odjezdu
+      default: none
+      selector:
+        select:
+          options:
+            - {value: none, label: Bez efektu}
+            - {value: left, label: Doleva}
+            - {value: right, label: Doprava}
+            - {value: up, label: Nahoru}
+            - {value: down, label: Dolů}
+            - {value: fade, label: Zhasnutí}
+    blink:
+      name: Blikání
+      default: none
+      selector:
+        select:
+          options:
+            - {value: none, label: Vypnuto}
+            - {value: hard, label: Ostré}
+            - {value: fade, label: Plynulé}
+    invert:
+      name: Inverze
+      selector:
+        boolean:
+    scroll_right:
+      name: Posouvat doprava
+      selector:
+        boolean:
+    blink_ms:
+      name: Perioda blikání
+      default: 1000
+      selector:
+        number: {min: 200, max: 10000, unit_of_measurement: ms}
+    transition_ms:
+      name: Délka přechodu
+      default: 600
+      selector:
+        number: {min: 100, max: 5000, unit_of_measurement: ms}

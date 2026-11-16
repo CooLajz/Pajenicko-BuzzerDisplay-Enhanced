@@ -1,0 +1,108 @@
+{
+  "title": "Pajenicko BuzzerDisplay Enhanced",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Připojit displej",
+        "description": "Zadejte IP adresu nebo místní název zařízení.",
+        "data": {
+          "host": "Adresa zařízení"
+        }
+      },
+      "pair": {
+        "title": "Spárovat displej",
+        "description": "Podržte tlačítko BOOT jednu sekundu. Zadejte šestimístný kód z displeje; platí tři minuty.",
+        "data": {
+          "code": "Párovací kód"
+        }
+      },
+      "reconfigure": {
+        "title": "Změnit adresu",
+        "data": {
+          "host": "Adresa zařízení"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Zařízení se nepodařilo připojit. Ověřte adresu a síť.",
+      "invalid_auth": "Kód není platný nebo párování vypršelo."
+    },
+    "abort": {
+      "already_configured": "Tento displej je již nastaven.",
+      "cannot_connect": "Zařízení není dostupné.",
+      "wrong_device": "Na této adrese odpovídá jiné zařízení.",
+      "reauth_successful": "Párování bylo obnoveno.",
+      "reconfigure_successful": "Adresa byla aktualizována."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Obrazovky displeje",
+        "menu_options": {
+          "add_page": "Přidat obrazovku",
+          "edit_page": "Upravit obrazovku",
+          "remove_page": "Odstranit obrazovku"
+        }
+      },
+      "edit_page": {
+        "title": "Vybrat obrazovku",
+        "data": {
+          "page": "Obrazovka"
+        }
+      },
+      "remove_page": {
+        "title": "Odstranit obrazovku",
+        "data": {
+          "page": "Obrazovka"
+        }
+      },
+      "page": {
+        "title": "Nastavení obrazovky",
+        "description": "Vyberte entitu pro živou hodnotu nebo vyplňte vlastní text. Dlouhý text dostane čas na celý průchod. Rychlost 0 posun vypne.",
+        "data": {
+          "text": "Text nebo popisek před hodnotou",
+          "entity_id": "Entita (volitelná)",
+          "decimals": "Desetinná místa",
+          "show_unit": "Zobrazit jednotku",
+          "hold_seconds": "Minimální doba zobrazení (s)",
+          "speed": "Rychlost posunu (px/s)",
+          "scroll_right": "Posouvat doprava",
+          "enter": "Nájezd",
+          "exit": "Odjezd",
+          "transition_ms": "Délka přechodu (ms)",
+          "blink": "Blikání",
+          "blink_ms": "Perioda blikání (ms)",
+          "invert": "Invertovat obraz"
+        }
+      }
+    },
+    "error": {
+      "empty_page": "Vyberte entitu nebo zadejte text.",
+      "text_too_long": "Zkraťte text na nejvýše 200 bajtů UTF-8."
+    },
+    "abort": {
+      "too_many_pages": "Lze nastavit nejvýše osm obrazovek.",
+      "no_pages": "Nejsou nastavené žádné obrazovky."
+    }
+  },
+  "selector": {
+    "effect": {
+      "options": {
+        "none": "Bez efektu",
+        "left": "Levá strana",
+        "right": "Pravá strana",
+        "up": "Horní strana",
+        "down": "Dolní strana",
+        "fade": "Plynulá změna jasu"
+      }
+    },
+    "blink": {
+      "options": {
+        "none": "Vypnuto",
+        "hard": "Ostré",
+        "fade": "Plynulé"
+      }
+    }
+  }
+}
